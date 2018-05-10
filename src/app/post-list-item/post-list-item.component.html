@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true,
+              'list-group-item-success': dontLove < love,
+              'list-group-item-danger':dontLove > love}">
+  <small class="pull-right">{{ date | date:'short'}}</small>  
+  <h3>{{ titre }}</h3>
+  <p>{{ contenu }}</p>
+  <small>j'aime {{  ongetLove() }}  |  je n'aime pas : {{ ongetDontLove() }}</small><br>
+  <button class="btn btn-success" (click)="onLove()">I love it</button>
+  <button class="btn btn-danger" (click)="onDontLove()">I don't love it</button>
+</li>
+
